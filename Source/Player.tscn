@@ -6,47 +6,47 @@
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 24, 16, 24 )
+region = Rect2( 0, 48, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 1 )
-region = Rect2( 16, 24, 16, 24 )
+region = Rect2( 16, 48, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 1 )
-region = Rect2( 32, 24, 16, 24 )
+region = Rect2( 32, 48, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 1 )
-region = Rect2( 48, 24, 16, 24 )
+region = Rect2( 48, 48, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 1 )
-region = Rect2( 0, 48, 16, 24 )
+region = Rect2( 0, 24, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 1 )
-region = Rect2( 16, 48, 16, 24 )
+region = Rect2( 16, 24, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 1 )
-region = Rect2( 32, 48, 16, 24 )
+region = Rect2( 32, 24, 16, 24 )
 
 [sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 1 )
-region = Rect2( 48, 48, 16, 24 )
+region = Rect2( 48, 24, 16, 24 )
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 4.0
+"name": "Running",
+"speed": 10.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
 "loop": true,
-"name": "Running",
-"speed": 10.0
+"name": "Idle",
+"speed": 4.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=10]
@@ -63,7 +63,6 @@ position = Vector2( 0, 0.176777 )
 scale = Vector2( 1, 1.00746 )
 frames = SubResource( 9 )
 animation = "Idle"
-frame = 2
 playing = true
 
 [node name="WorldCollision" type="CollisionShape2D" parent="."]
