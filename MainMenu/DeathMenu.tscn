@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://GUI/Play.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MainMenu/MainMenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://GUI/Exit.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/PublicPixel.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.113725, 0.113725, 0.113725, 1 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -220.0
+margin_right = 220.0
+margin_bottom = 76.0
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 0.870588, 0.870588, 0.870588, 1 )
+text = "You died..."
+align = 1
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" parent="." instance=ExtResource( 1 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -63.0436
+margin_bottom = -32.0436
+text = "Main Menu"
+sendTo = ExtResource( 2 )
+
+[node name="Exit" parent="." instance=ExtResource( 3 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -32.0436
+margin_bottom = -1.04358

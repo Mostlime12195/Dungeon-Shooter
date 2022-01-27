@@ -42,4 +42,9 @@ func _physics_process(delta):
 
 #If the players hitbox touches the enemy, the player dies
 func _on_PlayerHitbox_body_entered(body):
-	queue_free()
+	die()
+
+#This function will usually run when the player dies
+func die():
+	queue_free() #Kills (deletes) the player
+	get_tree().change_scene("res://MainMenu/DeathMenu.tscn") #Shows the DeathMenu scene
