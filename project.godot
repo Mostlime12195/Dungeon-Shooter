@@ -12,6 +12,8 @@ config_version=4
 
 config/name="Dungeon Shooter"
 run/main_scene="res://MainMenu/MainMenu.tscn"
+boot_splash/image="res://Assets/bootsplash.png"
+boot_splash/use_filter=false
 config/icon="res://icon.png"
 
 [display]
